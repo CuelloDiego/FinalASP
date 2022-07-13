@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    //- Diseñar una sola página Razon en donde se muestre un listado de productos (Nombre, Stock actual y stock minimo) y la cantidad total de artículos (la suma de todos los stock actual)
+    ViewData["Title"] = "Final - Diego Cuello";
+
+}
+
+<h1>Lista de Gpus</h1>
+
+   <div class="grilla">
+       @{ foreach (var item in Model.ProdList)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="/Img/@(item.Nombre).jpg"+@item.Nombre+.jpg class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@item.Nombre</h5>
+                <p class="card-text">Stock Actual: @item.StockActual</p>
+                <p class="card-text">Stock Minimo: @item.StockMin</p>
+                    @if (@item.StockActual < @item.StockMin) {<a href="https://listado.mercadolibre.com.ar/@item.Nombre" class="btn btn-danger" target="_blank">Reponer Stock Urgente</a> }
+                    else{<a href="https://listado.mercadolibre.com.ar/@item.Nombre" class="btn btn-primary" target="_blank">Reponer Stock</a>}
+                    
+            </div>
+        </div>
+        
+       
+        
+       
+    }
+    }
+   </div>
+
+
+
+
+
+
+

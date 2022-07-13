@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+   
+}
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(4,10fr);
+}
+.card{
+    
+    margin: 5px;
+    
+}
+.card img{
+    width: 17.7rem;
+    height: 230px;
+    
+}
+.card-body{
+    
+    text-align: center;
+    
+}
+h1{
+    text-align: center;
+}
